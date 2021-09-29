@@ -1,0 +1,14 @@
+{
+  "name": "apeindex",
+  "version": "1.0.0",
+  "description": "take in user data to json file and display on table",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ket",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
