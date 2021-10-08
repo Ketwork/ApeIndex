@@ -1,3 +1,8 @@
+.topright {
+    position: absolute; 
+    right: 16px;
+}
+
 .main {
     display: flex;
     justify-content: center;

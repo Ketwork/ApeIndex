@@ -37,12 +37,12 @@ app.post('/api', (request, response) => {
     const data = request.body;
     const timestamp = Date.now();
     data.timestamp = timestamp;
-    const ape = Math.round(data.span/data.height * 100)/100;
+    const ape1 = Math.round(data.span/data.height * 100)/100;
     const ape2 = data.span - data.height;
-    data.ape = ape;
+    data.ape1 = ape1;
     data.ape2 = ape2;
     database.insert(data);
-    console.log(ape);
+    console.log(ape1);
     response.json(data);
 });
 // var fs = require('fs');
