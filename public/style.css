@@ -47,3 +47,19 @@ h1 {
     padding: 0.5em 0.5em;
     }
 }
+
+@media (max-width: 415px) {
+    /* body {
+        margin: 0;
+    } */
+
+    /* .form-container {
+        margin: 10px;
+    } */
+
+    th,
+    td {
+    text-align: center;
+    /* padding: 0.5em 0.5em; */
+    }
+}
