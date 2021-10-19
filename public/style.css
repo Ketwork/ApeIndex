@@ -48,18 +48,19 @@ h1 {
     }
 }
 
-@media (max-width: 415px) {
-    /* body {
+@media (max-width: 425px) {
+    body {
         margin: 0;
-    } */
+    }
 
-    /* .form-container {
+    .form-container {
         margin: 10px;
-    } */
+    }
 
     th,
     td {
     text-align: center;
+    border-collapse: collapse;
     /* padding: 0.5em 0.5em; */
     }
 }
