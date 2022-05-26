@@ -45,23 +45,12 @@ app.post('/api', (request, response) => {
     console.log(ape1);
     response.json(data);
 });
-// var fs = require('fs');
 
-// var myArray = [];
-// const myForm = document.getElementById("myForm");
 
-// myForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     var name = document.getElementById('name').value;
-//     var height = document.getElementById('height').value;
-//     var span = document.getElementById('span').value;
-//     myArray.push(name);
-//     data = {
-//         name: name,
-//         height: Number(height),
-//         span: Number(span)
-//     }
-//     var jsonData = JSON.stringify(data);
-//     // fs.writeFile('words.json', jsonData, finished);
-//     console.log(jsonData);
-// })
+// NAV
+const navToggle = document.querySelector('.nav-toggle');
+
+navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+});
+

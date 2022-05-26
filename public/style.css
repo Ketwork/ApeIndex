@@ -1,11 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f6f6;
+    font-family: 'lora', serif;
+    margin: 0;
+}
+
+h1 {
+    padding: 0 0.5em 0em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Candal', serif;
+    margin: 5px;
+    color: #444;
+}
+
+a {
+    color: inherit;
+}
+
 .topright {
     position: absolute; 
     right: 16px;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .main {
     display: flex;
     justify-content: center;
+}
+
+.ape-section {
+    padding: 35px 30px;
 }
 
 table {
@@ -28,9 +71,63 @@ text-align: left;
 padding: 0.5em 1em;
 }
 
-h1 {
-    padding: 0 0.5em 0em;
+/* FORM INPUT */
+
+.ape-top h1 {
+    padding: 0;
+    margin: 0;
 }
+
+.form-container {
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-container form div {
+    margin-bottom: 10px;
+}
+
+.text-input {
+    padding: 0.7rem 1rem;
+    /* display: block; */
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+    background: #555;
+    color: white;
+    border-radius: 0.25em;
+    border: 1px solid transparent;
+    font-size: 1.08em;
+    font-family: 'Lora', serif;
+}
+
+.btn:hover {
+    background: rgb(53, 27, 78);
+}
+
+.form-container form p {
+    text-align: center;
+}
+
+
 
 @media (max-width: 385px) {
     body {
@@ -62,5 +159,23 @@ h1 {
     text-align: center;
     border-collapse: collapse;
     /* padding: 0.5em 0.5em; */
+    }
+}
+
+@media (max-width: 940px) {
+    .form-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 770px) {
+    .form-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
     }
 }

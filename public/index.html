@@ -9,53 +9,63 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- google fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
     <title>Ape Index</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- <header>
-        <div class="logo">
-            <h1 class="logo-text"><span>Ket</span>Work
-                <i class="fa fa-project-diagram"></i>
-            </h1>
+    <header>
+        <!-- <div class="logo">
+            <h1 class="logo-text"><span>Ket</span>Work</h1>
+        </div> -->
+        <div class = "logo">
+            <a href="#"><img src="../img/devket.png" alt=""></a>
         </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+    </header>
 
-    </header> -->
+    <section class="ape-section">
+        <h1>What's Your Ape Index?</h1>
+        <p>Ever wonder what your ape index is? Find out with the ape index calculator and compare with other climbers!</p>
+        <p>For greater acuracy please enter your actual height rather than your Tinder height :D</p>
+    </section>
 
     <div class="form-container">
-
-        <div class="topright"> <a href="table.html">Table</a></div>
-
+        <!-- <div class="topright"> <a href="table.html">See Table</a></div> -->
         <form id="myForm" action="table.html" method="">
-            <h2 class="form-title">Enter Details</h2>
+            <h2 class="form-title">Ape Index Calculator</h2>
             
             <div>
                 <label>Name</label>
-                <input placeholder="enter name" id="name" type="text" name="username" class="text-input">
+                <input id="name" type="text" name="username" class="text-input">
             </div>
             <div>
-                <label>Height</label>
-                <input placeholder="height in cm" id="height" type="number" name="height" class="text-input">
+                <label>Height in cm</label>
+                <input id="height" type="number" name="height" class="text-input">
             </div>
             <div>
-                <label>Wingspan</label>
-                <input placeholder="armspan in cm" id="span" type="number" name="span" class="text-input">
+                <label>Wingspan in cm</label>
+                <input id="span" type="number" name="span" class="text-input">
             </div>
             <div>
-                <button id="submit" type="submit" name="submit-btn" class="btn btn-big">Submit</button>
+                <button id="submit" type="submit" name="submit-btn" class="btn">Submit</button>
             </div>
+            <p><a href="table.html">See Table</a></p>
         </form>
-
     </div>
+
+    <section class="ape-section">
+        <h1>What Is the Ape Index?</h1>
+        <p>The ape index is a measurement of how your wingspan (aka arm span) compares to your height.</p>
+        <p>It’s believed that most people’s wingspan is equivalent to their height, meaning most people have a neutral ape index or, put another way, an ape index ratio of 1</p>
+    </section>
+
 </body>
 
     <script>
@@ -64,31 +74,31 @@
     const myForm = document.getElementById("myForm");
 
     myForm.addEventListener("submit", async (e) => {
-    // e.preventDefault();
-    var name = document.getElementById('name').value;
-    var height = document.getElementById('height').value;
-    var span = document.getElementById('span').value;
-    myArray.push(name);
-    data = {
-        name: name,
-        height: Number(height),
-        span: Number(span)
-    }
-    var jsonData = JSON.stringify(data);
-    // fs.writeFile('words.json', jsonData, finished);
-    console.log(jsonData);
+        // e.preventDefault();
+        var name = document.getElementById('name').value;
+        var height = document.getElementById('height').value;
+        var span = document.getElementById('span').value;
+        myArray.push(name);
+        data = {
+            name: name,
+            height: Number(height),
+            span: Number(span)
+        }
+        var jsonData = JSON.stringify(data);
+        // fs.writeFile('words.json', jsonData, finished);
+        console.log(jsonData);
 
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }
-    const response = await fetch('/api', options);
-    const json = await response.json();
-    console.log(json);
-});
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+        const response = await fetch('/api', options);
+        const json = await response.json();
+        console.log(json);
+    });
         
     </script>
 
@@ -96,7 +106,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     
     <!-- <script src="script.js"></script> -->
 
